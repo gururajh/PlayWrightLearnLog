@@ -2,7 +2,11 @@
   "name": "playwrightlearnlog",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+
+    "test":"npx playwright test",
+    "test:chromium":"npx playwright test --project chromium"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
