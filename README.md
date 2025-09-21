@@ -1,6 +1,6 @@
 
-##💬  Understand Playwright Locators
-### Chapter -3
+### 💬  Understand Playwright Locators
+## Chapter -3
 > - Locator methods - refer the playwright dot dev website.
 > - Locator idenitfied the element on the page.
 > - DOM - Document Object Model.
@@ -9,7 +9,7 @@
 > - DOM included javascript modified content, visible via - chrome dev tools( View Source)
 > - Locators identify and find objects inside the UI
 > - Locators interact and manipulates these elements.
-### Common Type of Locators
+## Common Type of Locators
 > - **Xpath**
 > - **CSS**
 > - **ID Locators**
