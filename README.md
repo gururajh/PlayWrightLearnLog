@@ -1,8 +1,9 @@
 
 ### 💬  Understand Playwright Locators
-## Chapter -3
+## Chapter -P1 =- Notes 
 > - Locator methods - refer the playwright dot dev website.
 > - Locator idenitfied the element on the page.
+> - a locator is a way to identify element(s) on the page
 > - DOM - Document Object Model.
 > - DOM Structure displayed on selecting Inspect ( right click) in browser.) generated using html.
 > - Playwright interacts with DOM
