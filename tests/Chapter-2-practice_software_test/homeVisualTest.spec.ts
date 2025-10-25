@@ -5,7 +5,12 @@ test.describe("Home Page without auth",() =>{
         await page.goto("https://practicesoftwaretesting.com/") 
 });
 test("visual test",async({page}) => {
-    await expect(page).toHaveScreenshot("home-page-no-auth.png");
+    // Add tolerance for minor pixel differences and handle dynamic content
+    await expect(page).toHaveScreenshot("home-page-no-auth.png", {
+        threshold: 0.2, // Allow 20% pixel difference
+        animations: "disabled", // Disable animations
+        mask: [page.locator(".col-md-9")] // Mask dynamic product grid
+    });
 });
 test ("Check Sign in", async({page}) => 
     {

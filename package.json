@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-
-    "test":"npx playwright test",
-    "test:chromium":"npx playwright test --project chromium"
+    "test": "npx playwright test tests/e2e",
+    "test:chromium": "npx playwright test tests/e2e --project chromium",
+    "test:all": "npx playwright test",
+    "typecheck": "tsc --noEmit"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +14,7 @@
   "description": "",
   "devDependencies": {
     "@playwright/test": "^1.52.0",
-    "@types/node": "^22.15.17"
+    "@types/node": "^22.15.17",
+    "typescript": "^5.9.3"
   }
 }

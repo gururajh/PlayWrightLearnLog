@@ -31,8 +31,11 @@ export default defineConfig({
     // baseURL: 'http://127.0.0.1:3000',
     baseURL: "https://practicesoftwaretesting.com",
     testIdAttribute: "data-test",
-    /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: "on",
+  /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
+  // Use 'on-first-retry' to avoid collecting traces for every run which
+  // can consume disk and slow down quick smoke checks. Traces will be
+  // collected when a test is retried which is usually the most useful time.
+  trace: "on-first-retry",
     actionTimeout: 0,
     ignoreHTTPSErrors: true,
     video: 'retain-on-failure',

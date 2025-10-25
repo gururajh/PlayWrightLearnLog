@@ -41,10 +41,13 @@ test("Verify AllPlaywrightLocators",async ({page})=>{
     // page.getByRole - locating by role ( role is not an attribute)
     // role locatore include buttoms,checkboxes, heading,links,tables.
     // and many more and follow W3C specifications for ARIA role.
-    // Prefet for interactive elements like buttons, checkboxes,links,
+    // Prefet for interactive elements like buttons, checkboxes,links, 
+    // lists, heading, tables etc
 
 
-
+    await page.getByRole("link",{name:'Sign in'}).click();
+    // Use getByRole with heading to be specific about which "Login" text we want
+    await expect(page.getByRole('heading', { name: 'Login' })).toBeVisible();
 
 
     

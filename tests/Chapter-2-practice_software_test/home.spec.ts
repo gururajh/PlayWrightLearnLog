@@ -20,7 +20,8 @@ test ("Home page", async({page}) => {
         await page.locator('[data-test="search-query"]').fill("Thor Hammer")
         await page.locator('[data-test="search-submit"]').click()
         await expect(productGrid.getByRole("link")).toHaveCount(1)
-        expect(page.locator(('[data-test="product-01JWSDZM9CBZWZA44PZN3N1YJS"]'))).toBeVisible()
+        // Check for the product by its name instead of ID since IDs can change
+        await expect(page.getByRole('link', { name: /Thor.*Hammer/i })).toBeVisible()
         //Check the result in the grid
 
 
